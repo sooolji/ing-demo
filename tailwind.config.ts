@@ -31,16 +31,10 @@ const config: Config = {
           DEFAULT: "#FAF9F6",
           light: "#FFF5F5",
         },
-        background: {
-          light: "#F5F5F0",
-        },
         text: {
           primary: "#1A1A1A",
           secondary: "#6B7280",
           light: "#9CA3AF",
-        },
-        accent: {
-          yellow: "#FDE68A",
         },
         badge: {
           citric: {
@@ -57,7 +51,10 @@ const config: Config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          light: "#F5F5F0",
+        },
         foreground: "hsl(var(--foreground))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -70,6 +67,7 @@ const config: Config = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          yellow: "#FDE68A",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
