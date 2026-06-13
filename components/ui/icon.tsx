@@ -2,19 +2,19 @@ import { cn } from "@/lib/utils";
 import {
   FiMapPin,
   FiCalendar,
-  FiRuler,
   FiDroplet,
   FiPackage,
   FiChevronDown,
 } from "react-icons/fi";
 import { GiSprout } from "react-icons/gi";
+import { BiRuler } from "react-icons/bi";
 import type { IconType } from "react-icons";
 
 const iconMap: Record<string, IconType> = {
   MapPin: FiMapPin,
   Calendar: FiCalendar,
   Sprout: GiSprout,
-  Ruler: FiRuler,
+  Ruler: BiRuler,
   Droplet: FiDroplet,
   Package: FiPackage,
   ChevronDown: FiChevronDown,

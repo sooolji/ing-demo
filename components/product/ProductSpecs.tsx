@@ -1,9 +1,11 @@
 "use client";
 
 import { Icon } from "@/components/ui/icon";
-import type { SpecItem } from "@/types/product";
+import type { Product } from "@/types/product";
 
-const specConfig: { icon: string; label: string; key: keyof SpecItem }[] = [
+type SpecKey = "origin" | "season" | "variety" | "caliber" | "flavor" | "presentation";
+
+const specConfig: { icon: string; label: string; key: SpecKey }[] = [
   { icon: "MapPin", label: "Origen", key: "origin" },
   { icon: "Calendar", label: "Temporada", key: "season" },
   { icon: "Sprout", label: "Variedad", key: "variety" },
@@ -13,7 +15,7 @@ const specConfig: { icon: string; label: string; key: keyof SpecItem }[] = [
 ];
 
 interface ProductSpecsProps {
-  product: Record<string, string>;
+  product: Pick<Product, SpecKey>;
 }
 
 export function ProductSpecs({ product }: ProductSpecsProps) {
@@ -35,7 +37,7 @@ export function ProductSpecs({ product }: ProductSpecsProps) {
               {spec.label}
             </span>
             <span className="text-sm font-semibold text-text-primary truncate">
-              {product[spec.key] ?? product[spec.key.toLowerCase()] ?? ""}
+              {product[spec.key]}
             </span>
           </div>
         </div>
