@@ -21,11 +21,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
     >
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div
-            className={`${
-              isEven ? "md:order-2" : "md:order-1"
-            } order-1`}
-          >
+          <div className="order-1 md:order-2">
             <ProductImage
               src={product.image}
               alt={product.imageAlt}
@@ -34,9 +30,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
           </div>
 
           <div
-            className={`${
-              isEven ? "md:order-1" : "md:order-2"
-            } order-2 space-y-8 animate-slide-up`}
+            className="order-2 md:order-1 space-y-8 animate-slide-up"
             style={{ opacity: 0 }}
           >
             <Badge
