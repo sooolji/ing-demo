@@ -4,8 +4,8 @@ import { Icon } from "@/components/ui/icon";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-cream to-white">
-      <div className="max-w-[900px] mx-auto space-y-6 animate-fade-in">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-cream to-white">
+      <div className="max-w-[900px] mx-auto space-y-6 animate-fade-in pt-[120px] pb-[120px]">
         <h1 className="text-hero-mobile md:text-hero text-primary-green">
           Ingredientes que inspiran<span className="text-secondary-green">.</span>
         </h1>

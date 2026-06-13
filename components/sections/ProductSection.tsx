@@ -45,14 +45,12 @@ export function ProductSection() {
               <div className={`${i % 2 === 0 ? "md:order-1" : "md:order-2"} space-y-8`}>
                 <Skeleton className="h-6 w-24 rounded" />
                 <Skeleton className="h-10 w-48" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
                   {Array.from({ length: 6 }).map((_, j) => (
-                    <div key={j} className="flex items-center gap-3">
-                      <Skeleton className="h-8 w-8 rounded-md" />
-                      <div className="space-y-1">
-                        <Skeleton className="h-3 w-20" />
-                        <Skeleton className="h-3 w-28" />
-                      </div>
+                    <div key={j} className="flex items-center gap-3 py-4 border-b border-gray-200">
+                      <Skeleton className="h-5 w-5 rounded-md" />
+                      <Skeleton className="h-3 w-20" />
+                      <Skeleton className="h-3 w-28" />
                     </div>
                   ))}
                 </div>

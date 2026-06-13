@@ -15,17 +15,16 @@ export function ProductCard({ product, index }: ProductCardProps) {
 
   return (
     <section
-      className={`py-20 px-6 md:px-10 ${
+      className={`py-24 px-8 ${
         isEven ? "bg-cream" : "bg-cream-light"
       }`}
     >
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-          {/* Image - order changes on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div
             className={`${
               isEven ? "md:order-2" : "md:order-1"
-            } order-1 w-full md:w-[90%] mx-auto`}
+            } order-1`}
           >
             <ProductImage
               src={product.image}
@@ -34,7 +33,6 @@ export function ProductCard({ product, index }: ProductCardProps) {
             />
           </div>
 
-          {/* Info */}
           <div
             className={`${
               isEven ? "md:order-1" : "md:order-2"
@@ -46,10 +44,10 @@ export function ProductCard({ product, index }: ProductCardProps) {
                 product.categoryColor === "citric" ? "citric" : "vegetable"
               }
             >
-              {product.category}
+              {`0${index + 1}. ${product.category}`}
             </Badge>
 
-            <h2 className="text-product-name-mobile md:text-product-name-tablet lg:text-product-name text-primary-green">
+            <h2 className="text-product-name-mobile md:text-product-name text-primary-green">
               {product.name}
             </h2>
 
